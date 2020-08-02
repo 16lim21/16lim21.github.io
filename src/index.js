@@ -1,11 +1,16 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Home from './Home.js';
+
+const App = () => {
+
+  return (
+    <Home/>
+  );
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
