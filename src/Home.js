@@ -2,6 +2,7 @@ import React, { useState} from 'react'
 import styled from 'styled-components'
 import profile from './resources/profile.JPEG'
 import Button from './Button.js'
+import NightMode from './NightMode.js'
 
 const Grid = styled.div`
     display:flex;
@@ -50,24 +51,27 @@ const Temp = styled.div`
 const Home = () => {
 
     const [hovers, setHovers] = useState([])
-
+    const [isNight, setNight] = useState(false)
     return(
-        <Grid>
-            <Row>
-                <Profile src={profile}/>
-                <InitialIntro>
-                    <span role='img' aria-label="wave">👋 </span>
-                    <b>
-                        Hey There! <br/> I’m Michael Li
-                    </b>
-                </InitialIntro>
-                <DetailedIntro>
-                    An ambitious software developer and full time student studying at Columbia University. I love to tackle problems with software and learn about all things technology! 
-                </DetailedIntro>
-            </Row>
-            <Button message="About Me" color='#FF6779'/>
-            <Temp>temporary</Temp>
-        </Grid> 
+        <>
+            <NightMode isNight={isNight} setNight={() => setNight(!isNight)}></NightMode>
+            <Grid>
+                <Row>
+                    <Profile src={profile}/>
+                    <InitialIntro>
+                        <span role='img' aria-label="wave">👋 </span>
+                        <b>
+                            Hey There! <br/> I’m Michael Li
+                        </b>
+                    </InitialIntro>
+                    <DetailedIntro>
+                        An ambitious software developer and full time student studying at Columbia University. I love to tackle problems with software and learn about all things technology! 
+                    </DetailedIntro>
+                </Row>
+                <Button message="About Me" color='#FF6779'/>
+                <Temp>temporary</Temp>
+            </Grid> 
+        </>
     )
 }
 
