@@ -7,6 +7,7 @@ const Toggle = styled.div`
     padding-left: 2rem;
     position: relative;
     z-index: 999;
+    align-self: flex-start;
 `;
 
 const Checkbox = styled.input`
@@ -24,6 +25,7 @@ const SwitchLabel = styled.label`
     border-radius: 1.625rem;
     position: relative;
     transition: background-color .2s;
+    align-items: center;
 `;
 
 const SwitchBall = styled.span`
@@ -44,31 +46,27 @@ const SwitchBall = styled.span`
 
 const Sun = styled.img`
     position: absolute;
-    width: 2.59375rem;
-    height: 2.59375rem;
-    top: 0.325rem;
+    width: 2rem;
+    height: width;
     right: 1rem; 
     transition: 0.3s;
 
     ${Checkbox}:checked + ${SwitchLabel} &{
-        right: 0%;
-        transform: translateX(100%);
+        transform: translateX(150%);
         opacity: 0%;
     }
 `;
 
 const Moon = styled.img`
     position: absolute;
-    width: 2.59375rem;
-    height: 2.59375rem;
-    top: 0.325rem;
-    left: -2.59375rem; 
+    width: 2rem;
+    height: width;
+    left: -2rem; 
     transition: 0.3s;
     opacity: 0%;
 
     ${Checkbox}:checked + ${SwitchLabel} &{
-        left: 0%;
-        transform: translateX(35%);
+        transform: translateX(150%);
         opacity: 100%;
     }
 `;
