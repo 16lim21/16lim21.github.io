@@ -6,7 +6,7 @@ const ProjectsPage = styled.div`
     flex-direction: column;
     margin: 2.5rem;
     width: 75rem;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 `;
 
 const Header = styled.div`

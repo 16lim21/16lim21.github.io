@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import sun from './resources/light-on.png'
 import moon from './resources/dark-on.png'
@@ -21,11 +21,12 @@ const SwitchLabel = styled.label`
     cursor: pointer;
     width: 7.25rem;
     height: 3.1875rem;
-    background: ${props => (props.isNight && "#67A7FF") || "#CCCCCC"};
+    background-color: ${props => (props.isNight && "#67A7FF") || "#CCCCCC"};
     border-radius: 1.625rem;
     position: relative;
     transition: background-color .2s;
     align-items: center;
+    overflow: hidden;
 `;
 
 const SwitchBall = styled.span`
@@ -53,7 +54,6 @@ const Sun = styled.img`
 
     ${Checkbox}:checked + ${SwitchLabel} &{
         transform: translateX(150%);
-        opacity: 0%;
     }
 `;
 
@@ -63,11 +63,9 @@ const Moon = styled.img`
     height: width;
     left: -2rem; 
     transition: 0.3s;
-    opacity: 0%;
 
     ${Checkbox}:checked + ${SwitchLabel} &{
         transform: translateX(150%);
-        opacity: 100%;
     }
 `;
 

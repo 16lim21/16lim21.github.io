@@ -14,19 +14,19 @@ const StyledButton = styled.div`
     transition: 0.2s;
     transition-timing-function: ease-out;
     font-size: 2.5rem;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
     text-align: center;
     cursor: pointer;
     &:hover{
         transform: translateY(-5%);
-        box-shadow: 0rem 0.625rem 1.25rem ${props => props.color.concat('1E')};
+        box-shadow: 0rem 0.625rem 1.25rem ${props => props.color.concat("1E")};
     }
 `;
 
 const Button = ({message, color, myRef}) => {
 
-    const handleClick = ref => ref.current.scrollIntoView({behavior: 'smooth', block: 'center',})
+    const handleClick = ref => ref.current.scrollIntoView({behavior: "smooth", block: "center",})
 
     return (
         <StyledButton color={color} onClick={() => handleClick(myRef)}>

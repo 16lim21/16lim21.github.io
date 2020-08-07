@@ -11,6 +11,9 @@ const Content = styled.div`
     position: relative;
     flex-direction: column;
     align-items: center;
+    background-color: ${props => (props.isNight && "#2A3558") || "#FFFFFF"};
+    color: ${props => (props.isNight && "#FFFFFF") || "#000000"};
+    transition: background-color .2s, color .2s;
 `;
 
 const PageHolder = styled.div`
@@ -25,11 +28,11 @@ const App = () => {
     const [isNight, setNight] = useState(false)
 
     return (
-        <Content>
+        <Content isNight={isNight}>
             <NightMode isNight={isNight} setNight={() => setNight(!isNight)}></NightMode>
             <Home aboutRef={aboutRef} expRef={expRef} projRef={projRef}/>
             <About myRef={aboutRef}/>
-            <Experience myRef={expRef}/>
+            <Experience myRef={expRef} isNight={isNight}/>
             <Projects myRef={projRef}/>
         </Content>
     );

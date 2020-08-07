@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import profile from './resources/profile.JPEG'
 import Button from './Button.js'
@@ -28,7 +28,7 @@ const InitialIntro = styled.div`
     margin-left: 5rem;
     width: 25rem;
     font-size: 3.5rem;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
 `;
 
@@ -36,7 +36,7 @@ const DetailedIntro = styled.div`
     margin: 2.5rem; 
     text-align: left;
     font-size: 2.75rem;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 200;
 `;
 
@@ -53,7 +53,7 @@ const Home = ({aboutRef, expRef, projRef}) => {
             <Row>
                 <Profile src={profile}/>
                 <InitialIntro>
-                    <span role='img' aria-label='wave'>👋 </span>
+                    <span role="img" aria-label="wave">👋 </span>
                     <b>
                         Hey There! <br/> I’m Michael Li
                     </b>
@@ -63,10 +63,10 @@ const Home = ({aboutRef, expRef, projRef}) => {
                 </DetailedIntro>
             </Row>
             <ButtonCol>
-                <Button message='About Me' color='#FF6779' myRef={aboutRef}/>
-                <Button message='Experience' color='#DC67FF' myRef={expRef}/>
-                <Button message='Projects' color='#67ADFF' myRef={projRef}/>
-                <Button message='Contact' color='#FFCA67'/>
+                <Button message="About Me" color="#FF6779" myRef={aboutRef}/>
+                <Button message="Experience" color="#DC67FF" myRef={expRef}/>
+                <Button message="Projects" color="#67ADFF" myRef={projRef}/>
+                <Button message="Contact" color="#FFCA67"/>
             </ButtonCol>
         </Grid> 
     )
