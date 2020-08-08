@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
 import styled from 'styled-components'
 import bny from './resources/BNY.png'
 import columbia from './resources/Columbia.png'
@@ -72,8 +71,11 @@ function Row(props){
     return(
             <StyledRow>
                 <Icon>{image}</Icon>
-                <Detail>{props.detail}</Detail>
-                <Date>{props.date}</Date>
+                <Detail>
+                    <B>{props.company}</B><br/>
+                    {props.jobTitle}
+                </Detail>
+                <Date>{props.date}<br/><br/></Date>
             </StyledRow>
     );
 }
@@ -85,22 +87,22 @@ const Experience = ({myRef, isNight}) => {
             <ExperiencePage ref={myRef}>
                 <Header>Work Experience</Header>
                 <Content>
-                    <Row isNight={isNight} imgSrc={bny} imgAlt='bny' imgStyle={{"height": "6.25rem" }}
-                        detail={<><B>BNY Mellon</B><br/>Summer Technology Analyst</>}
-                        date={<>Jun 2020 - Aug 2020<br/><br/></>}
+                    <Row isNight={isNight} imgSrc={bny} imgAlt="bny" imgStyle={{"height": "6.25rem" }}
+                        company="BNY Mellon" jobTitle="Summer Technology Analyst"
+                        date="Jun 2020 - Aug 2020"
                     />
                     <Row isNight={isNight} imgSrc={spectator} imgNightSrc={spectatorNight} 
-                        imgAlt='spectator' imgStyle={{"width": "23.25rem" }}
-                        detail={<><B>Columbia Daily Spectator</B><br/>Associate Product Engineer</>}
-                        date={<>Aug 2019 - Feb 2020<br/><br/></>}
+                        imgAlt="spectator" imgStyle={{"width": "23.25rem" }}
+                        company="Columbia Daily Spectator" jobTitle="Associate Product Engineer"
+                        date="Aug 2019 - Feb 2020"
                     />
-                    <Row isNight={isNight} imgSrc={columbia} imgAlt='columbia' imgStyle={{"width": "23.25rem" }}
-                        detail={<><B>Columbia DVMM Lab</B><br/>Research Assistant</>}
-                        date={<>Jun 2019-Aug 2019<br/><br/></>}
+                    <Row isNight={isNight} imgSrc={columbia} imgAlt="columbia" imgStyle={{"width": "23.25rem" }}
+                        company="Columbia DVMM Lab" jobTitle="Research Assistant"
+                        date="Jun 2019-Aug 2019"
                     />
-                    <Row isNight={isNight} imgSrc={uncubed} imgAlt='uncubed' imgStyle={{"width": "20.75rem" }}
-                        detail={<><B>Uncubed</B><br/>Technical Recruiting Intern</>}
-                        date={<>Jan 2019-Apr 2019<br/><br/></>}
+                    <Row isNight={isNight} imgSrc={uncubed} imgAlt="uncubed" imgStyle={{"width": "20.75rem" }}
+                        company="Uncubed" jobTitle="Technical Recruiting Intern"
+                        date="Jan 2019-Apr 2019"
                     />
                 </Content>
             </ExperiencePage>
