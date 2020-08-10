@@ -25,12 +25,15 @@ const Content = styled.div`
 
 const B = styled.b`
     font-weight: 600;
+    display: flex;
 `;
 
 const StyledRow = styled.div`
-    height: 6.25rem;
+    display: flex;
     position: relative;
     align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
 `;
 
 const StyledArrow = styled.a`
@@ -38,6 +41,7 @@ const StyledArrow = styled.a`
     height: 10px; 
     width: 10px;
 	border: 1px solid #000000;
+    border-color: ${props => (props.isNight && "#FFFFFF") || "#000000"};
 	border-width: 2px 2px 0 0;
 	transform: rotate(45deg);
 
@@ -47,6 +51,7 @@ const StyledArrow = styled.a`
         height: 10px; 
         width: 10px;
         border: 1px solid #000000;
+        border-color: ${props => (props.isNight && "#FFFFFF") || "#000000"};
         border-width: 2px 2px 0 0;
         transform: translate(7px, -9px);
     }
@@ -58,17 +63,30 @@ const StyledArrow = styled.a`
     }
 `;
 
+const Break = styled.div`
+    flex-basis: 100%;
+    height: 0;
+`;
+
+const ArrowContainer = styled.div`
+    padding-top: 0.25rem;
+    margin-left: 0.5rem;
+`;
+
 function Row(props){
     return(
             <StyledRow>
-                <B>{props.header}</B><br/>
+                <B>{props.header}</B>
+                <ArrowContainer>
+                    <StyledArrow href={props.link} isNight={props.isNight}/>
+                </ArrowContainer>
+                <Break></Break>
                 {props.description}
-                <StyledArrow href="https://google.com"/>
             </StyledRow>
     );
 }
 
-const Projects = ({myRef}) => {
+const Projects = ({myRef, isNight}) => {
 
     return(
         <>
@@ -76,11 +94,18 @@ const Projects = ({myRef}) => {
                 <Header>My Projects</Header>
                 <Content>
                     <Row header="Airbnb Review Analyzer"
-                        description="Created a python script to review airbnb data"/>
-                    <Row header="HTTP Web Client"
-                        description="Project created for the Advanced Programming course at Columbia University"/>
-                    <Row header="Simple MERN Application"
-                        description=" Project to learn MERN stack"/>
+                        description="Created a python script to review airbnb data"
+                        isNight={isNight}
+                        link="https://github.com/16lim21/Airbnb-Case-Study"/>
+                    <Row header="Detecting Hate Symbols"
+                        description="Project created for Columbia University's DVMM lab in order to test model
+                        accuracy and precision in detecting hate symbols from pictures"
+                        isNight={isNight}
+                        link="https://github.com/16lim21/visual-literacy-object-detection"/>
+                    <Row header="This Website!"
+                        description="Created using ReactJS and styled components."
+                        isNight={isNight}
+                        link="https://github.com/16lim21/Personal-Website"/>
                 </Content>
             </ProjectsPage>
         </>

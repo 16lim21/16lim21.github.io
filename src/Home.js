@@ -7,6 +7,7 @@ const Grid = styled.div`
     display: flex;
     padding-bottom: 10rem;
     margin-top: 2rem;
+    font-family: "Source Sans Pro", sans-serif;
 `;
 
 const Row = styled.div`
@@ -26,9 +27,7 @@ const Profile = styled.img`
 
 const InitialIntro = styled.div`
     margin-left: 5rem;
-    width: 25rem;
     font-size: 3.5rem;
-    font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
 `;
 
@@ -36,7 +35,6 @@ const DetailedIntro = styled.div`
     margin: 2.5rem; 
     text-align: left;
     font-size: 2.75rem;
-    font-family: "Source Sans Pro", sans-serif;
     font-weight: 200;
 `;
 
@@ -46,7 +44,7 @@ const ButtonCol = styled.div`
     justify-content: center;
 `;
 
-const Home = ({aboutRef, expRef, projRef}) => {
+const Home = ({aboutRef, expRef, projRef, contRef}) => {
 
     return(
         <Grid>
@@ -66,7 +64,7 @@ const Home = ({aboutRef, expRef, projRef}) => {
                 <Button message="About Me" color="#FF6779" myRef={aboutRef}/>
                 <Button message="Experience" color="#DC67FF" myRef={expRef}/>
                 <Button message="Projects" color="#67ADFF" myRef={projRef}/>
-                <Button message="Contact" color="#FFCA67"/>
+                <Button message="Contact" color="#FFCA67" myRef={contRef}/>
             </ButtonCol>
         </Grid> 
     )

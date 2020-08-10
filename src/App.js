@@ -4,6 +4,7 @@ import About from './About'
 import Experience from './Experience'
 import NightMode from './NightMode'
 import Projects from './Projects'
+import Contact from './Contact'
 import styled from 'styled-components'
 
 const Content = styled.div`
@@ -25,15 +26,17 @@ const App = () => {
     const aboutRef = useRef(null)
     const expRef = useRef(null)
     const projRef = useRef(null)
+    const contactRef = useRef(null)
     const [isNight, setNight] = useState(false)
 
     return (
         <Content isNight={isNight}>
             <NightMode isNight={isNight} setNight={() => setNight(!isNight)}></NightMode>
-            <Home aboutRef={aboutRef} expRef={expRef} projRef={projRef}/>
+            <Home aboutRef={aboutRef} expRef={expRef} projRef={projRef} contRef={contactRef}/>
             <About myRef={aboutRef}/>
             <Experience myRef={expRef} isNight={isNight}/>
-            <Projects myRef={projRef}/>
+            <Projects myRef={projRef} isNight={isNight}/>
+            <Contact myRef={contactRef}/>
         </Content>
     );
 }
