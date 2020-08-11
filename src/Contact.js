@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Footnote from './Footnote'
 
 const Container = styled.div`
     position: relative;
@@ -39,7 +40,7 @@ const StyledInput = styled.input`
 
 const Description = styled.textarea`
     overflow-y: auto;
-    resize: both;
+    resize: vertical;
     width: 100%;
     padding: 1rem;
     padding-bottom: 3rem;
@@ -73,23 +74,26 @@ const Submit = styled.input`
     }
 `;
 
-const Contact = ({myRef}) => {
+const Contact = ({myRef, isNight}) => {
     return(
-        <Container ref={myRef}>
-            <Header>
-                Contact Me
-            </Header>
-            <StyledForm>
-                <StyledInput type="text" placeholder="Your Name"/>
-                <StyledInput type="email" placeholder="Your Email"/>
-                <Description type="email"
-                    placeholder="Send me a message if you’d like to connect or if
-                            there are any questions about my experiences! If you’d
-                            like to collaborate on a project, I would love to hear
-                            about it as well!"/>
-                <Submit type="submit" value="Submit"/>
-            </StyledForm>
-        </Container>
+        <div ref={myRef}>
+            <Container>
+                <Header>
+                    Contact Me
+                </Header>
+                <StyledForm>
+                    <StyledInput type="text" placeholder="Your Name"/>
+                    <StyledInput type="email" placeholder="Your Email"/>
+                    <Description type="email"
+                        placeholder="Send me a message if you’d like to connect or if
+                                there are any questions about my experiences! If you’d
+                                like to collaborate on a project, I would love to hear
+                                about it as well!"/>
+                    <Submit type="submit" value="Submit"/>
+                </StyledForm>
+            </Container>
+            <Footnote isNight={isNight}/>
+        </div>
     )
 }
 

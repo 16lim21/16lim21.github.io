@@ -37,8 +37,7 @@ const App = () => {
             <About myRef={aboutRef}/>
             <Experience myRef={expRef} isNight={isNight}/>
             <Projects myRef={projRef} isNight={isNight}/>
-            <Contact myRef={contactRef}/>
-            <Footnote isNight={isNight}/>
+            <Contact myRef={contactRef} isNight={isNight}/>
         </Content>
     );
 }
