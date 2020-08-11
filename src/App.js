@@ -5,6 +5,7 @@ import Experience from './Experience'
 import NightMode from './NightMode'
 import Projects from './Projects'
 import Contact from './Contact'
+import ScrollTop from './ScrollTop'
 import styled from 'styled-components'
 
 const Content = styled.div`
@@ -33,6 +34,7 @@ const App = () => {
             <Experience myRef={expRef} isNight={isNight}/>
             <Projects myRef={projRef} isNight={isNight}/>
             <Contact myRef={contactRef} isNight={isNight}/>
+            <ScrollTop/>
         </Content>
     );
 }
