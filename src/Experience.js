@@ -10,7 +10,7 @@ const ExperiencePage = styled.div`
     display: flex;
     flex-direction: column;
     margin: 2.5rem;
-    width: 75rem;
+    width: 83.25%;
     font-size: 1.875rem;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;

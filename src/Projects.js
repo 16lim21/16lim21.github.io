@@ -5,7 +5,7 @@ const ProjectsPage = styled.div`
     display: flex;
     flex-direction: column;
     margin: 2.5rem;
-    width: 75rem;
+    width: 83.25%;
     font-size: 1.875rem;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
@@ -94,12 +94,12 @@ const Projects = ({myRef, isNight}) => {
                 <Header>My Projects</Header>
                 <Content>
                     <Row header="Airbnb Review Analyzer"
-                        description="Created a python script to review airbnb data"
+                        description="Created a python script to review airbnb data."
                         isNight={isNight}
                         link="https://github.com/16lim21/Airbnb-Case-Study"/>
                     <Row header="Detecting Hate Symbols"
                         description="Project created for Columbia University's DVMM lab in order to test model
-                        accuracy and precision in detecting hate symbols from pictures"
+                        accuracy and precision in detecting hate symbols from pictures."
                         isNight={isNight}
                         link="https://github.com/16lim21/visual-literacy-object-detection"/>
                     <Row header="This Website!"

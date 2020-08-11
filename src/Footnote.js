@@ -20,7 +20,7 @@ const Images = styled.div`
     height: 4.25rem;
 `;
 
-const StyledImage = styled.div`
+const StyledImage = styled.a`
     display: flex;
     position: relative;
     width: 4.25rem;
@@ -62,7 +62,7 @@ function Image(props){
         image = <img src={props.imgHover} alt="gitHover"/>
     }
     return(
-        <StyledImage>
+        <StyledImage href={props.link}>
             {image}
             <Top src={props.imgSrc} alt="github"/>
         </StyledImage>
@@ -74,14 +74,16 @@ const Footnote = ({isNight}) => {
     return(
         <Container>
             <Images>
-                <Image isNight={isNight} imgSrc={git} 
-                    imgHover={gitHover} imgNightHover={gitNight} />
+                <Image isNight={isNight} imgSrc={git}
+                    imgHover={gitHover} imgNightHover={gitNight} 
+                    link="https://github.com/16lim21"/>
                 <Image isNight={isNight} imgSrc={linkedin} 
-                    imgHover={linkedinHover} imgNightHover={linkedinNight} />
+                    imgHover={linkedinHover} imgNightHover={linkedinNight}
+                    link="https://www.linkedin.com/in/michael-li-2b6aba156/"/>
             </Images>
             <Break></Break>
             <Credits>
-                Designed and Created by Michael Li 2020 (inspired by Emme Pogue) 
+                Designed and Created by Michael Li 2020
             </Credits>
         </Container>
     );

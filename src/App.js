@@ -5,7 +5,6 @@ import Experience from './Experience'
 import NightMode from './NightMode'
 import Projects from './Projects'
 import Contact from './Contact'
-import Footnote from './Footnote'
 import styled from 'styled-components'
 
 const Content = styled.div`
@@ -16,10 +15,6 @@ const Content = styled.div`
     background-color: ${props => (props.isNight && "#2A3558") || "#FFFFFF"};
     color: ${props => (props.isNight && "#FFFFFF") || "#000000"};
     transition: background-color .2s, color .2s;
-`;
-
-const PageHolder = styled.div`
-    display: flex;
 `;
 
 const App = () => {

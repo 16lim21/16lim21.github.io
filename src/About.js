@@ -5,7 +5,7 @@ const AboutPage = styled.div`
     display: flex;
     flex-direction: column;
     margin: 2.5rem;
-    max-width: 75rem;
+    max-width: 83.25%;
     font-family: 'Source Sans Pro', sans-serif;
 `;
 

@@ -5,7 +5,7 @@ import Footnote from './Footnote'
 const Container = styled.div`
     position: relative;
     border-radius: 4rem;
-    width: 85%;
+    width: 83.25%;
     padding: 2rem;
     padding-left: 3.25rem;
     padding-right: 3.25rem;
