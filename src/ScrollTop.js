@@ -14,6 +14,7 @@ const Circle = styled.div`
     width: 3rem;
     border: 0.25rem solid black;
     border-radius: 50%;
+    border-color: ${props => (props.isNight && "#FFFFFF") || "#000000"};
     cursor: pointer;
     transition: 0.3s;
 
@@ -37,7 +38,7 @@ const Arrow = styled.div`
         top: 22.5%;
         height: 1.5rem;
         width: 0.375rem;
-        background: black;
+        background: ${props => (props.isNight && "#FFFFFF") || "#000000"};
     }
 
     &:before {
@@ -76,8 +77,8 @@ export default class ScrollTop extends Component{
     render(){
         return(
             <Button onClick={() => this.scrollToTop()} bottom={this.state.bottom}>
-                <Circle>
-                    <Arrow></Arrow>
+                <Circle isNight={this.props.isNight}>
+                    <Arrow isNight={this.props.isNight}></Arrow>
                 </Circle>
             </Button>
         );
