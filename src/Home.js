@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import profile from './resources/profile.JPEG'
+import profile from './resources/profile.JPG'
 import Button from './Button.js'
+import resume from './resources/Public-Resume.pdf'
 
 const Grid = styled.div`
     display: flex;
@@ -46,6 +47,9 @@ const ButtonCol = styled.div`
 
 const Home = ({aboutRef, expRef, projRef, contRef}) => {
 
+    const handleClick = ref => ref.current.scrollIntoView({behavior: "smooth", block: "center",})
+    const resumeClick = () => window.open(resume)
+
     return(
         <Grid>
             <Row>
@@ -61,10 +65,11 @@ const Home = ({aboutRef, expRef, projRef, contRef}) => {
                 </DetailedIntro>
             </Row>
             <ButtonCol>
-                <Button message="About Me" color="#FF6779" myRef={aboutRef}/>
-                <Button message="Experience" color="#DC67FF" myRef={expRef}/>
-                <Button message="Projects" color="#67ADFF" myRef={projRef}/>
-                <Button message="Contact" color="#FFCA67" myRef={contRef}/>
+                <Button message="About Me" color="#FF6779" myRef={aboutRef} handleClick={handleClick}/>
+                <Button message="Experience" color="#DC67FF" myRef={expRef} handleClick={handleClick}/>
+                <Button message="Projects" color="#FFCA67" myRef={projRef} handleClick={handleClick}/>
+                <Button message="Contact" color="#67ADFF" myRef={contRef} handleClick={handleClick}/>
+                <Button message="Resume" color="#5ECC63" handleClick={resumeClick}/>
             </ButtonCol>
         </Grid> 
     )

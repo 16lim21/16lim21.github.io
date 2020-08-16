@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 import Home from './Home'
 import About from './About'
 import Experience from './Experience'
@@ -20,6 +20,8 @@ const Content = styled.div`
 
 const App = () => {
     
+    useEffect(() => {document.title = "Michael's Website"}, []);
+
     const aboutRef = useRef(null)
     const expRef = useRef(null)
     const projRef = useRef(null)
