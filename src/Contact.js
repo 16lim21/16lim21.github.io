@@ -58,8 +58,7 @@ const Description = styled.textarea`
 
 const Submit = styled.input`
     padding: 0.875rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    width: 11.25rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: auto;
@@ -91,6 +90,7 @@ const Contact = ({myRef, isNight}) => {
     const [message, setMessage] = useState('')
     const [email, setEmail] = useState('')
     const [sent, setSent] = useState(false)
+    const [buttonText, setButtonText] = useState('Submit')
 
     const resetForm = () => {
         setName('')
@@ -102,6 +102,7 @@ const Contact = ({myRef, isNight}) => {
     const submit = (event) => {
         event.preventDefault()
 
+        setButtonText('Sending...')
         let data = {
             name: name,
             email: email,
@@ -142,7 +143,7 @@ const Contact = ({myRef, isNight}) => {
                                     onChange={event => setMessage(event.target.value)}
                                     value={message}
                                     required/>
-                        <Submit type="submit" value="Submit"/>
+                        <Submit type="submit" value={buttonText}/>
                     </StyledForm>
     }
 
