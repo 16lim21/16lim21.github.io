@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import Footnote from './Footnote'
+import axios from 'axios';
 
 const Container = styled.div`
     position: relative;
@@ -75,6 +76,39 @@ const Submit = styled.input`
 `;
 
 const Contact = ({myRef, isNight}) => {
+
+    const [name, setName] = useState('')
+    const [message, setMessage] = useState('')
+    const [email, setEmail] = useState('')
+    const [sent, setSent] = useState(false)
+
+    const resetForm = () => {
+        setName('')
+        setMessage('')
+        setEmail('')
+        return
+    }
+
+    const submit = (event) => {
+        event.preventDefault()
+
+        let data = {
+            name: name,
+            email: email,
+            message: message
+        }
+
+        axios.post('API_URL', data)
+            .then(response => {
+                setSent(true)
+            })
+            .catch(() => {
+                console.log('message not sent')
+            })
+    };
+
+    useEffect(() => resetForm(), [sent])
+
     return(
         <div ref={myRef}>
             <Container>
