@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fcdafb19.chunk.css",
+    "main.js": "/static/js/main.a6b49c26.chunk.js",
+    "main.js.map": "/static/js/main.a6b49c26.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3374ac37.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3374ac37.js.map",
+    "static/js/2.37003d52.chunk.js": "/static/js/2.37003d52.chunk.js",
+    "static/js/2.37003d52.chunk.js.map": "/static/js/2.37003d52.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.db0bbac0c42dfb78f3120f5cb8668184.js": "/precache-manifest.db0bbac0c42dfb78f3120f5cb8668184.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.fcdafb19.chunk.css.map": "/static/css/main.fcdafb19.chunk.css.map",
+    "static/js/2.37003d52.chunk.js.LICENSE.txt": "/static/js/2.37003d52.chunk.js.LICENSE.txt",
+    "static/media/BNY.png": "/static/media/BNY.1673e7f7.png",
+    "static/media/Columbia.png": "/static/media/Columbia.b6615fc5.png",
+    "static/media/Spectator-Night.png": "/static/media/Spectator-Night.fb01e282.png",
+    "static/media/Spectator.png": "/static/media/Spectator.baa8c998.png",
+    "static/media/github.png": "/static/media/github.4cb0f774.png",
+    "static/media/linkedin.png": "/static/media/linkedin.02407f03.png",
+    "static/media/profile.JPEG": "/static/media/profile.f187422e.JPEG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3374ac37.js",
+    "static/js/2.37003d52.chunk.js",
+    "static/css/main.fcdafb19.chunk.css",
+    "static/js/main.a6b49c26.chunk.js"
+  ]
+}
