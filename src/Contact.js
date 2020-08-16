@@ -3,10 +3,15 @@ import styled from 'styled-components'
 import Footnote from './Footnote'
 import axios from 'axios';
 
+const API_URL = "http://localhost:4444/api"
+
+const ContactPage = styled.div`
+    width: 92.5%;
+`;
+
 const Container = styled.div`
     position: relative;
     border-radius: 4rem;
-    width: 83.25%;
     padding: 2rem;
     padding-left: 3.25rem;
     padding-right: 3.25rem;
@@ -67,12 +72,18 @@ const Submit = styled.input`
     color: #67A7FF;
     background-color: #FFFFFF;
     transition: 0.3s;
+    cursor: pointer;
 
     &:hover{
         background-color: #67A7FF;
         color: #FFFFFF;
         border-color: #FFFFFF;
     }
+`;
+
+const Submitted = styled.div`
+    color: #FFFFFF;
+    font-weight: 400;
 `;
 
 const Contact = ({myRef, isNight}) => {
@@ -98,36 +109,54 @@ const Contact = ({myRef, isNight}) => {
             message: message
         }
 
-        axios.post('API_URL', data)
+        axios.post(API_URL, data)
             .then(response => {
                 setSent(true)
+                console.log('sent')
             })
             .catch(() => {
                 console.log('message not sent')
             })
-    };
+    }
 
     useEffect(() => resetForm(), [sent])
 
+    let submitted = ''
+    if (sent){
+        submitted= <Submitted>Your message has been sent!</Submitted>
+    }
+    else{
+        submitted= <StyledForm>
+                        <StyledInput type="text" placeholder="Your Name"
+                                    onChange={event => setName(event.target.value)}
+                                    value={name}
+                                    required/>
+                        <StyledInput type="email" placeholder="Your Email"
+                                    onChange={event => setEmail(event.target.value)}
+                                    value={email}
+                                    required/>
+                        <Description type="text"
+                                    placeholder="Send me a message if you’d like to connect or if
+                                    there are any questions about my experiences! If you’d
+                                    like to collaborate on a project, I would love to hear
+                                    about it as well!"
+                                    onChange={event => setMessage(event.target.value)}
+                                    value={message}
+                                    required/>
+                        <Submit type="submit" value="Submit"/>
+                    </StyledForm>
+    }
+
     return(
-        <div ref={myRef}>
-            <Container>
+        <ContactPage ref={myRef}>
+            <Container onSubmit={event => submit(event)}>
                 <Header>
                     Contact Me
                 </Header>
-                <StyledForm>
-                    <StyledInput type="text" placeholder="Your Name"/>
-                    <StyledInput type="email" placeholder="Your Email"/>
-                    <Description type="email"
-                        placeholder="Send me a message if you’d like to connect or if
-                                there are any questions about my experiences! If you’d
-                                like to collaborate on a project, I would love to hear
-                                about it as well!"/>
-                    <Submit type="submit" value="Submit"/>
-                </StyledForm>
+                {submitted}
             </Container>
             <Footnote isNight={isNight}/>
-        </div>
+        </ContactPage>
     )
 }
 
