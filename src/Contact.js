@@ -84,6 +84,7 @@ const Submit = styled.input`
 const Submitted = styled.div`
     color: #FFFFFF;
     font-weight: 400;
+    font-size: 2rem;
 `;
 
 const Contact = ({myRef, isNight}) => {
