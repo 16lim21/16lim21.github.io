@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import Footnote from './Footnote'
 import axios from 'axios';
 
-const API_URL = "http://localhost:4444/api"
-
 const ContactPage = styled.div`
     width: 92.5%;
 `;
@@ -110,7 +108,7 @@ const Contact = ({myRef, isNight}) => {
             message: message
         }
 
-        axios.post(API_URL, data)
+        axios.post(process.env.REACT_APP_API_URL, data)
             .then(response => {
                 setSent(true)
                 console.log('sent')
