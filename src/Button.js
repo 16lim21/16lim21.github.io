@@ -24,9 +24,7 @@ const StyledButton = styled.div`
     }
 `;
 
-const Button = ({message, color, myRef}) => {
-
-    const handleClick = ref => ref.current.scrollIntoView({behavior: "smooth", block: "center",})
+const Button = ({message, color, myRef, handleClick}) => {
 
     return (
         <StyledButton color={color} onClick={() => handleClick(myRef)}>
