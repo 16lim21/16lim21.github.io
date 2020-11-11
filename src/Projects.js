@@ -93,15 +93,20 @@ const Projects = ({myRef, isNight}) => {
             <ProjectsPage ref={myRef}>
                 <Header>My Projects</Header>
                 <Content>
-                    <Row header="Airbnb Review Analyzer"
-                        description="Created a python script to review airbnb data."
+                    <Row header="Blockout"
+                        description="Blockout is an application that will interact with google calendar to 
+                        &quot;block out&quot; times for you to do work."
                         isNight={isNight}
-                        link="https://github.com/16lim21/Airbnb-Case-Study"/>
+                        link="https://github.com/16lim21/Blockout"/>
                     <Row header="Detecting Hate Symbols"
                         description="Project created for Columbia University's DVMM lab in order to test model
                         accuracy and precision in detecting hate symbols from pictures."
                         isNight={isNight}
                         link="https://github.com/16lim21/visual-literacy-object-detection"/>
+                    <Row header="Airbnb Review Analyzer"
+                        description="Created a python script to review airbnb data."
+                        isNight={isNight}
+                        link="https://github.com/16lim21/Airbnb-Case-Study"/>
                     <Row header="This Website!"
                         description="Created using ReactJS and styled components."
                         isNight={isNight}
