@@ -1,30 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.fcdafb19.chunk.css",
-    "main.js": "/static/js/main.a9f82072.chunk.js",
-    "main.js.map": "/static/js/main.a9f82072.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.3374ac37.js",
-    "runtime-main.js.map": "/static/js/runtime-main.3374ac37.js.map",
-    "static/js/2.1b654390.chunk.js": "/static/js/2.1b654390.chunk.js",
-    "static/js/2.1b654390.chunk.js.map": "/static/js/2.1b654390.chunk.js.map",
+    "main.css": "/static/css/main.52d77ad6.chunk.css",
+    "main.js": "/static/js/main.13102076.chunk.js",
+    "main.js.map": "/static/js/main.13102076.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0891bca5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0891bca5.js.map",
+    "static/js/2.af689426.chunk.js": "/static/js/2.af689426.chunk.js",
+    "static/js/2.af689426.chunk.js.map": "/static/js/2.af689426.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.32be10233ca06493b8ef06a17216d897.js": "/precache-manifest.32be10233ca06493b8ef06a17216d897.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.fcdafb19.chunk.css.map": "/static/css/main.fcdafb19.chunk.css.map",
-    "static/js/2.1b654390.chunk.js.LICENSE.txt": "/static/js/2.1b654390.chunk.js.LICENSE.txt",
-    "static/media/BNY.png": "/static/media/BNY.1673e7f7.png",
-    "static/media/Columbia.png": "/static/media/Columbia.b6615fc5.png",
-    "static/media/Public-Resume.pdf": "/static/media/Public-Resume.7e1d45ae.pdf",
-    "static/media/Spectator-Night.png": "/static/media/Spectator-Night.fb01e282.png",
-    "static/media/Spectator.png": "/static/media/Spectator.baa8c998.png",
-    "static/media/github.png": "/static/media/github.4cb0f774.png",
-    "static/media/linkedin.png": "/static/media/linkedin.02407f03.png",
-    "static/media/profile.JPG": "/static/media/profile.2551c99f.JPG"
+    "static/css/main.52d77ad6.chunk.css.map": "/static/css/main.52d77ad6.chunk.css.map",
+    "static/js/2.af689426.chunk.js.LICENSE.txt": "/static/js/2.af689426.chunk.js.LICENSE.txt",
+    "static/media/BNY.40101adb.png": "/static/media/BNY.40101adb.png",
+    "static/media/Columbia.e47cb98d.png": "/static/media/Columbia.e47cb98d.png",
+    "static/media/Public-Resume.4313c971.pdf": "/static/media/Public-Resume.4313c971.pdf",
+    "static/media/Spectator-Night.b3b3163b.png": "/static/media/Spectator-Night.b3b3163b.png",
+    "static/media/Spectator.ba6952aa.png": "/static/media/Spectator.ba6952aa.png",
+    "static/media/github.3206cf12.png": "/static/media/github.3206cf12.png",
+    "static/media/linkedin.58ada31f.png": "/static/media/linkedin.58ada31f.png",
+    "static/media/profile.1b6e54ce.JPG": "/static/media/profile.1b6e54ce.JPG"
   },
   "entrypoints": [
-    "static/js/runtime-main.3374ac37.js",
-    "static/js/2.1b654390.chunk.js",
-    "static/css/main.fcdafb19.chunk.css",
-    "static/js/main.a9f82072.chunk.js"
+    "static/js/runtime-main.0891bca5.js",
+    "static/js/2.af689426.chunk.js",
+    "static/css/main.52d77ad6.chunk.css",
+    "static/js/main.13102076.chunk.js"
   ]
 }
