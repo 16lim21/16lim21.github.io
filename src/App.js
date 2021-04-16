@@ -1,43 +1,14 @@
-import React, {useRef, useState, useEffect} from 'react'
-import Home from './Home'
-import About from './About'
-import Experience from './Experience'
-import NightMode from './NightMode'
-import Projects from './Projects'
-import Contact from './Contact'
-import ScrollTop from './ScrollTop'
-import styled from 'styled-components'
-
-const Content = styled.div`
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	align-items: center;
-	background-color: ${props => (props.isNight && "#2A3558") || "#FFFFFF"};
-	color: ${props => (props.isNight && "#FFFFFF") || "#000000"};
-	transition: background-color .2s, color .2s;
-`;
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import Main from './Main'
+import HCD from './projects/HCD'
 
 const App = () => {
-	
-	useEffect(() => {document.title = "Michael's Website"}, []);
-
-	const aboutRef = useRef(null)
-	const expRef = useRef(null)
-	const projRef = useRef(null)
-	const contactRef = useRef(null)
-	const [isNight, setNight] = useState(false)
-
 	return (
-		<Content isNight={isNight}>
-			<NightMode isNight={isNight} setNight={() => setNight(!isNight)}></NightMode>
-			<Home aboutRef={aboutRef} expRef={expRef} projRef={projRef} contRef={contactRef}/>
-			<About myRef={aboutRef}/>
-			<Experience myRef={expRef} isNight={isNight}/>
-			<Projects myRef={projRef} isNight={isNight}/>
-			<Contact myRef={contactRef} isNight={isNight}/>
-			<ScrollTop isNight={isNight}/>
-		</Content>
+		<Switch>
+			<Route exact path='/' component={Main}></Route>
+			<Route exact path='/Human-Centered-Design' component={HCD}></Route>
+		</Switch>
 	);
 }
 

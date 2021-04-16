@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const ProjectsPage = styled.div`
 	display: flex;
@@ -44,6 +45,7 @@ const StyledArrow = styled.a`
 	border-color: ${props => (props.isNight && "#FFFFFF") || "#000000"};
 	border-width: 2px 2px 0 0;
 	transform: rotate(45deg);
+	transition: all 0.3s;
 
 	&:after{
 		content: '';
@@ -59,7 +61,6 @@ const StyledArrow = styled.a`
 	&:hover{
 		transform: rotate(45deg) translate(5px, -7px);
 		cursor: pointer;
-		transition: 0.3s;
 	}
 `;
 
@@ -73,7 +74,7 @@ const ArrowContainer = styled.div`
 	margin-left: 0.5rem;
 `;
 
-function Row(props){
+const Row = (props) => {
 	return(
 			<StyledRow>
 				<B>{props.header}</B>
@@ -86,8 +87,22 @@ function Row(props){
 	);
 }
 
-const Projects = ({myRef, isNight}) => {
+const RouterRow = (props) => {
+	return(
+		<StyledRow>
+			<B>{props.header}</B>
+			<Link to={props.link}>
+				<ArrowContainer>
+					<StyledArrow isNight={props.isNight}/>
+				</ArrowContainer>
+			</Link>
+			<Break></Break>
+			{props.description}
+		</StyledRow>
+	);
+}
 
+const Projects = ({myRef, isNight}) => {
 	return(
 		<>
 			<ProjectsPage ref={myRef}>
@@ -111,6 +126,11 @@ const Projects = ({myRef, isNight}) => {
 						description="Created using ReactJS and styled components."
 						isNight={isNight}
 						link="https://github.com/16lim21/Personal-Website"/>
+					<RouterRow header="Human Centered Design Course"
+						description="Columbia University Course taken during Spring 2021 that taught me how
+						to design a product to meet consumer and human needs."
+						isNight={isNight}
+						link="/Human-Centered-Design"/>
 				</Content>
 			</ProjectsPage>
 		</>
