@@ -1,28 +1,31 @@
 {
   "files": {
     "main.css": "/static/css/main.52d77ad6.chunk.css",
-    "main.js": "/static/js/main.13102076.chunk.js",
-    "main.js.map": "/static/js/main.13102076.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.0891bca5.js",
-    "runtime-main.js.map": "/static/js/runtime-main.0891bca5.js.map",
-    "static/js/2.af689426.chunk.js": "/static/js/2.af689426.chunk.js",
-    "static/js/2.af689426.chunk.js.map": "/static/js/2.af689426.chunk.js.map",
+    "main.js": "/static/js/main.d4eac989.chunk.js",
+    "main.js.map": "/static/js/main.d4eac989.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.29cbda57.js",
+    "runtime-main.js.map": "/static/js/runtime-main.29cbda57.js.map",
+    "static/js/2.a689cb6d.chunk.js": "/static/js/2.a689cb6d.chunk.js",
+    "static/js/2.a689cb6d.chunk.js.map": "/static/js/2.a689cb6d.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.52d77ad6.chunk.css.map": "/static/css/main.52d77ad6.chunk.css.map",
-    "static/js/2.af689426.chunk.js.LICENSE.txt": "/static/js/2.af689426.chunk.js.LICENSE.txt",
+    "static/js/2.a689cb6d.chunk.js.LICENSE.txt": "/static/js/2.a689cb6d.chunk.js.LICENSE.txt",
     "static/media/BNY.40101adb.png": "/static/media/BNY.40101adb.png",
     "static/media/Columbia.e47cb98d.png": "/static/media/Columbia.e47cb98d.png",
+    "static/media/Hydration_Redesign1.53431471.mp4": "/static/media/Hydration_Redesign1.53431471.mp4",
+    "static/media/Hydration_Redesign2.ca7dc4de.mp4": "/static/media/Hydration_Redesign2.ca7dc4de.mp4",
     "static/media/Public-Resume.4313c971.pdf": "/static/media/Public-Resume.4313c971.pdf",
     "static/media/Spectator-Night.b3b3163b.png": "/static/media/Spectator-Night.b3b3163b.png",
     "static/media/Spectator.ba6952aa.png": "/static/media/Spectator.ba6952aa.png",
     "static/media/github.3206cf12.png": "/static/media/github.3206cf12.png",
     "static/media/linkedin.58ada31f.png": "/static/media/linkedin.58ada31f.png",
-    "static/media/profile.1b6e54ce.JPG": "/static/media/profile.1b6e54ce.JPG"
+    "static/media/profile.1b6e54ce.JPG": "/static/media/profile.1b6e54ce.JPG",
+    "static/media/revinylize.12bd70bc.mp4": "/static/media/revinylize.12bd70bc.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.0891bca5.js",
-    "static/js/2.af689426.chunk.js",
+    "static/js/runtime-main.29cbda57.js",
+    "static/js/2.a689cb6d.chunk.js",
     "static/css/main.52d77ad6.chunk.css",
-    "static/js/main.13102076.chunk.js"
+    "static/js/main.d4eac989.chunk.js"
   ]
 }
