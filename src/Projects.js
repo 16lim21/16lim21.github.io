@@ -91,7 +91,7 @@ const RouterRow = (props) => {
 	return(
 		<StyledRow>
 			<B>{props.header}</B>
-			<Link to={props.link}>
+			<Link to={props.link} onClick={() => props.setHome(false)}>
 				<ArrowContainer>
 					<StyledArrow isNight={props.isNight}/>
 				</ArrowContainer>
@@ -102,7 +102,7 @@ const RouterRow = (props) => {
 	);
 }
 
-const Projects = ({myRef, isNight}) => {
+const Projects = ({myRef, isNight, setHome}) => {
 	return(
 		<>
 			<ProjectsPage ref={myRef}>
@@ -129,7 +129,7 @@ const Projects = ({myRef, isNight}) => {
 					<RouterRow header="Human Centered Design Course"
 						description="Columbia University Course taken during Spring 2021 that taught me how
 						to design a product to meet consumer and human needs."
-						isNight={isNight}
+						isNight={isNight} setHome={setHome}
 						link="/Human-Centered-Design"/>
 				</Content>
 			</ProjectsPage>

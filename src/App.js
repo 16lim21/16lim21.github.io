@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Main from './Main'
 import HCD from './projects/HCD'
-import NightMode from './NightMode'
+import Navbar from './Navbar'
 import styled from 'styled-components'
 
 const Background = styled.div`
@@ -13,14 +13,17 @@ const Background = styled.div`
 
 const App = () => {
 	const [isNight, setNight] = useState(false)
+	const [isHome, setHome] = useState(true)
 
 	return (
 		<Background isNight={isNight}>
-			<NightMode isNight={isNight} setNight={() => setNight(!isNight)}></NightMode>
+			<Navbar isNight={isNight} setNight={setNight} 
+					isHome={isHome} setHome={setHome}/>
 			<Switch>
 				<Route exact path='/' 
 					render={(props) => (
-						<Main {...props} isNight={isNight}/>
+						<Main {...props} isNight={isNight}
+							setHome={setHome}/>
 					)}></Route>
 				<Route exact path='/Human-Centered-Design' 
 					isNight={isNight} 

@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect} from 'react'
+import React, {useRef, useEffect} from 'react'
 import Home from './Home'
 import About from './About'
 import Experience from './Experience'
@@ -32,7 +32,7 @@ const Main = (props) => {
 			<Home aboutRef={aboutRef} expRef={expRef} projRef={projRef} contRef={contactRef}/>
 			<About myRef={aboutRef}/>
 			<Experience myRef={expRef} isNight={isNight}/>
-			<Projects myRef={projRef} isNight={isNight}/>
+			<Projects myRef={projRef} isNight={isNight} setHome={props.setHome}/>
 			<Contact myRef={contactRef} isNight={isNight}/>
 			<ScrollTop isNight={isNight}/>
 		</Content>
