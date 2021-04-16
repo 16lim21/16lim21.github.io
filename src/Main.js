@@ -2,7 +2,6 @@ import React, {useRef, useState, useEffect} from 'react'
 import Home from './Home'
 import About from './About'
 import Experience from './Experience'
-import NightMode from './NightMode'
 import Projects from './Projects'
 import Contact from './Contact'
 import ScrollTop from './ScrollTop'
@@ -18,19 +17,18 @@ const Content = styled.div`
 	transition: background-color .2s, color .2s;
 `;
 
-const Main = () => {
+const Main = (props) => {
 	
 	useEffect(() => {document.title = "Michael's Website"}, []);
 
+	const isNight = props.isNight
 	const aboutRef = useRef(null)
 	const expRef = useRef(null)
 	const projRef = useRef(null)
 	const contactRef = useRef(null)
-	const [isNight, setNight] = useState(false)
 
 	return (
 		<Content isNight={isNight}>
-			<NightMode isNight={isNight} setNight={() => setNight(!isNight)}></NightMode>
 			<Home aboutRef={aboutRef} expRef={expRef} projRef={projRef} contRef={contactRef}/>
 			<About myRef={aboutRef}/>
 			<Experience myRef={expRef} isNight={isNight}/>
